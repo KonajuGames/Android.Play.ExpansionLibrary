@@ -161,7 +161,7 @@ namespace System.IO.Compression.Zip
                 // comparing it to what is stored in the Zip directory
                 foreach (ZipFileEntry entry in entries)
                 {
-                    if (entry.Crc32 != -1)
+                    if (entry.Crc32 != (uint)0xffffffff)
                     {
                         DateTime startTime = DateTime.UtcNow;
 
